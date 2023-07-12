@@ -19,13 +19,13 @@ mymap.on("click", function () {
 
 var isAuthenticated = false; // Global variable to track authentication state
 
-L.tileLayer(
-  "https://tile.jawg.io/jawg-streets/{z}/{x}/{y}{r}.png?access-token=ajtqZHjRHNlgtB8yMorgThyqCEY89y4sUcHHu7v8b7KwozAIly2TrU5zhfqC6l5I",
-  {}
-).addTo(mymap);
-mymap.attributionControl.addAttribution(
-  '<a href="https://www.jawg.io" target="_blank">&copy; Jawg</a> - <a href="https://www.openstreetmap.org" target="_blank">&copy; OpenStreetMap</a>&nbsp;contributors'
-);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  subdomains: 'abcd',
+  maxZoom: 20
+}).addTo(mymap);
+
+// Hide the default Leaflet attribution control
+document.getElementsByClassName('leaflet-control-attribution')[0].style.display = 'none';
 
 // Define an empty array to store markers if it doesn't exist
 if (typeof markers === "undefined") {
