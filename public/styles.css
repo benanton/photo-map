@@ -191,7 +191,8 @@ button[type="submit"]:hover {
   bottom: 55px; /* Adjust the top value to position the button */
   left: calc(50% - 15px);
   padding: 5px;
-  background-color: transparent;
+  background-color: transparent; 
+  color: #d4ba93;
   border: none;
   cursor: pointer;
   visibility: visible; /* Ensure the button is visible */
@@ -353,5 +354,9 @@ button[type="submit"]:hover {
 
 .marker-icon {
   opacity: 0.5;
+}
+
+.leaflet-marker-pane {
+  z-index: 1000;
 }
 
