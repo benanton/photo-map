@@ -19,9 +19,8 @@ mymap.on("click", function () {
 
 var isAuthenticated = false; // Global variable to track authentication state
 
-L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-  subdomains: 'abcd',
-  maxZoom: 20
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+	attribution: ''
 }).addTo(mymap);
 
 // Hide the default Leaflet attribution control
