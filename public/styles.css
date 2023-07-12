@@ -356,7 +356,3 @@ button[type="submit"]:hover {
   opacity: 0.5;
 }
 
-.leaflet-marker-pane {
-  z-index: 1000;
-}
-
